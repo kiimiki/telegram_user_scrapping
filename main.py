@@ -1,6 +1,5 @@
 from telethon.sync import TelegramClient
 from telethon import errors
-from tqdm import tqdm
 import pandas as pd
 
 api_id = " "
