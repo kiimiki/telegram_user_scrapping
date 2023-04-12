@@ -3,7 +3,6 @@ from telethon import errors
 from tqdm import tqdm
 import pandas as pd
 
-
 api_id = " "
 api_hash = " "
 phone = " "
@@ -27,9 +26,7 @@ for d in dialogs:
     if d.is_channel:
         channels.append(d.title)
 
-print(channels)
-
-for channel in tqdm(channels):
+for channel in channels:
     c = channel
     try:
         for partic in client.iter_participants(c):
@@ -61,4 +58,3 @@ df['First Name'] = fname
 df['Last Name'] = lname
 df['User ID'] = userid
 df.to_csv('users.csv', index=False)
-print('HappyEnd')
